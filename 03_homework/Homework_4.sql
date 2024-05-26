@@ -7,11 +7,15 @@ FROM product;
 
 -- Windowed Functions
 --2.1
-SELECT 
-    customer_id 
-    market_date, 
-    ROW_NUMBER() OVER (PARTITION BY customer_id ORDER BY market_date) AS visit_number
-FROM customer_purchases;
+SELECT customer_id, market_date,
+ROW_NUMBER() OVER (PARTITION BY customer_id ORDER BY market_date) AS visit_number
+
+FROM customer_purchases
+
+GROUP BY customer_id, market_date
+ORDER BY customer_id, market_date
+
+
 --2.2 
 SELECT 
     customer_id 
