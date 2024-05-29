@@ -49,7 +49,7 @@ Review the AdventureWorks Schema [here](https://i.stack.imgur.com/LMu4W.gif)
 
 Highlight at least two differences between it and your ERD. Would you change anything in yours?
 ```
-It’s larger Model as it does contain more aspects of operations and departments involved like HR, Purchasing, Production, dbo. In terms of sales part it does have additional tables like SalesTaxRate, Currency, Currency Rate, Special Offer, Sales Reason as well as payment details like CC, Sales Territory and Sales TerritoryHistory. I would definitely change and add more tables in the model if they would require by the business needs to have more accurate data, however it would definitely required another  level of handling and data protection.
+The AdventureWorks Schema is a larger Model as it does contain more aspects of operations and departments involved like HR, Purchasing, Production, dbo. In terms of sales part it does have additional tables like SalesTaxRate, Currency, CurrencyRate, SpecialOffer, Sales Reason as well as payment details like CreditCard, SalesTerritory and SalesTerritoryHistory. I would definitely change and add more tables in the model if they would require by the business needs to have more accurate data, however it would definitely required another  level of handling and data protection.
 ```
 
 # Criteria
