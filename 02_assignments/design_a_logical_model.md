@@ -27,7 +27,6 @@ CUSTOMER_ADDRESS (type 1) -any change will overwrite the previous address.
 
 CUSTOMER_ADDRESS_HISTORY (type 2 ) - will retain the changes
 
- • Columns:
  • CustomerAddressID (Primary Key)
  • CustomerID (Foreign Key to Customer table)
  • Address
