@@ -15,7 +15,34 @@ _Hint, search type 1 vs type 2 slowly changing dimensions._
 
 Bonus: Are there privacy implications to this, why or why not?
 ```
-Your answer...
+CUSTOMER_ADDRESS (type 1) -any change will overwrite the previous address.
+
+ 
+ • CustomerID (Primary Key, Foreign Key to Customer table)
+ • Address
+ • City
+ • Province 
+ • ZipCode
+ • Country
+
+CUSTOMER_ADDRESS_HISTORY (type 2 ) - will retain the changes
+
+ • Columns:
+ • CustomerAddressID (Primary Key)
+ • CustomerID (Foreign Key to Customer table)
+ • Address
+ • City
+ • Province 
+ • ZipCode
+ • Country
+ • StartDate
+ • EndDate
+ • CurrentFlag (to identify if the address is current)
+
+For the Architecture type 1, as the data is going to be overwritten it does not require much data protection except just a current data.
+
+For the Architecture type2 there should be more privacy implication used as it does include all the history of previous addresses of the client, so it’s important to use like access control in order to control the employees with certain access, encryption and data minimization or data masking. The best solution would be use few layers of data protection.
+
 ```
 
 ## Question 4
@@ -23,7 +50,7 @@ Review the AdventureWorks Schema [here](https://i.stack.imgur.com/LMu4W.gif)
 
 Highlight at least two differences between it and your ERD. Would you change anything in yours?
 ```
-Your answer...
+It’s larger Model as it does contain more aspects of operations and departments involved like HR, Purchasing, Production, dbo. In terms of sales part it does have additional tables like SalesTaxRate, Currency, Currency Rate, Special Offer, Sales Reason as well as payment details like CC, Sales Territory and Sales TerritoryHistory. I would definitely change and add more tables in the model if they would require by the business needs to have more accurate data, however it would definitely required another  level of handling and data protection.
 ```
 
 # Criteria
